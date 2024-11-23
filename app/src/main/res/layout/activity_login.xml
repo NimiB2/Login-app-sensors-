@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin"
+        android:textSize="@dimen/text_size"
+        android:text="LOGIN"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_below="@+id/title_login"
+        android:textSize="20sp"
+        android:text="Click the buttons to get instructions."/>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_below="@id/instructions"
+        android:orientation="vertical"
+        >
+
+        <!-- Six Circles -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circle1"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_marginBottom="@dimen/margin"
+            android:background="@drawable/circle_red"
+            android:contentDescription="Step 1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/instructions_size"
+            android:padding="@dimen/margin"
+            android:visibility="gone" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circle2"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/circle_red"
+            android:contentDescription="Step 2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/instructions_size"
+            android:padding="@dimen/margin"
+            android:visibility="gone" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/recordingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:elevation="@dimen/margin"
+            android:text="@string/start_recording"
+            android:visibility="gone" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circle3"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/circle_red"
+            android:contentDescription="Step 3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/instructions_size"
+            android:padding="@dimen/margin"
+            android:visibility="gone" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circle4"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/circle_red"
+            android:contentDescription="Step 4" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/instructions_size"
+            android:padding="@dimen/margin"
+            android:visibility="gone" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circle5"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/circle_red"
+            android:contentDescription="Step 5" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/instructions_size"
+            android:padding="@dimen/margin"
+            android:visibility="gone" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
