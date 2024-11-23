@@ -20,6 +20,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.textview.MaterialTextView;
@@ -33,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     private MaterialTextView[] instructions;
 
     private SensorManager sensorManager;
-    private FloatingActionButton recordingButton;
+    private ExtendedFloatingActionButton recordingButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -295,6 +296,12 @@ public class LoginActivity extends AppCompatActivity {
         if (!tasksCompleted[taskIndex]) {
             tasksCompleted[taskIndex] = true;
             circles[taskIndex].setImageResource(R.drawable.circle_green);
+
+            if (taskIndex == 1) {
+                instructions[taskIndex].setVisibility(View.GONE);
+                recordingButton.setVisibility(View.GONE);
+            }
+
             if (allTasksCompleted()) {
                 moveToSuccessPage();
             }
@@ -309,7 +316,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void moveToSuccessPage() {
-        startActivity(new Intent(this, MainActivity.class));
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
         finish();
     }
 }
